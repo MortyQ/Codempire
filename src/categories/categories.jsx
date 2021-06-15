@@ -20,7 +20,27 @@ const Categories =()=>{
                 
 
                 <div className="wrapper_categories_option">
-
+                        <div className="option"></div>
+                        <div className="option"></div>
+                        <div className="option"></div>
+                        <div className="option"></div>
+                        <div className="option"></div>
+                        <div className="option"></div>
+                        <div className="option"></div>
+                        <div className="option"></div>
+                        <div className="option"></div>
+                        <div className="option"></div>
+                        <div className="option"></div>
+                        <div className="option"></div>
+                        <div className="option"></div>
+                        <div className="option"></div>
+                        <div className="option"></div>
+                        <div className="option"></div>
+                        <div className="option"></div>
+                        <div className="option"></div>
+                        <div className="option"></div>
+                        <div className="option"></div>
+                        <div className="option"></div>
                 </div>
         </div>
     )

@@ -25,4 +25,17 @@
     width: 80%;
     height: 70%;
     background-color: rosybrown;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.option {
+    margin: 0 10px 0 20px;
+    width: 170px;
+    height: 57px;
+    border: 3px solid #422ED4;
+    border-radius: 20px;
 }
