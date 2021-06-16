@@ -4,10 +4,13 @@ import './jokes.css';
 
 
 const Jokes =({jokes})=>{
-
+// Categories State.jokes now here 
     const [state, setState] = useState({
         jokes:[]
     })
+
+
+    // Take random jokes from API
 
     const getJokes =()=>{
         fetch(`https://api.chucknorris.io/jokes/random`)
@@ -25,12 +28,12 @@ const Jokes =({jokes})=>{
 }, []);
 
     const createJokes =()=>{
-
+        //Load Standart randome JOKS in First Loading Page , after load random
         return(
             <div className="jokes_text" >
             <Typography align='center'>
                 <span>
-                     {jokes || state.jokes}
+                     {jokes || state.jokes}  
                 </span>
                </Typography>
                </div>

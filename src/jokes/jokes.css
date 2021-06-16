@@ -20,8 +20,8 @@
 .jokes_text {
     margin: 10px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
     color: white;
     font-family: Raleway;
     font-style: normal;
@@ -29,4 +29,15 @@
     font-size: 20px;
     line-height: 30px;
     color: #FFFFFF;
+    text-align: center;
+}
+
+.jokes_text::after {
+    content: ' ” ';
+    text-align: center;
+}
+
+.jokes_text::before {
+    content: ' “ ';
+    text-align: center;
 }

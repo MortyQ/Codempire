@@ -11,6 +11,8 @@ const Categories =()=>{
         jokes: null
     })
 
+
+    // Get all categories from API
     const getCategories =()=>{
         fetch('https://api.chucknorris.io/jokes/categories')
         .then(res => res.json())
@@ -27,6 +29,8 @@ const Categories =()=>{
             getCategories();
     }, []);
 
+
+    // Function for get "event.target" categories and change. 
     const getQuote = (category) => {
         fetch(`https://api.chucknorris.io/jokes/random?category=${category}`)
         .then(res => res.json())
