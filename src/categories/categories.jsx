@@ -1,12 +1,14 @@
 import React,{useEffect, useState} from 'react';
 import {Typography} from '@material-ui/core'
 import './categories.css';
+import Jokes from '../jokes/jokes'
 
 
 const Categories =()=>{
     
     const [state, setState] = useState({
-        items:[]
+        items:[],
+        jokes: null
     })
 
     const getCategories =()=>{
@@ -25,6 +27,17 @@ const Categories =()=>{
             getCategories();
     }, []);
 
+    const getQuote = (category) => {
+        fetch(`https://api.chucknorris.io/jokes/random?category=${category}`)
+        .then(res => res.json())
+        .then(res =>{
+                // debugger;
+                 setState({
+                     ...state,
+                     jokes: res.value
+                    })
+            })
+    }
 
     return(
         <div className="wrapper_categories">       
@@ -41,14 +54,14 @@ const Categories =()=>{
                        return(
                 <div className="option" key={i} >
                         <Typography  align='center'>
-                            <button className='categories_button' >
+                            <button className='categories_button'  onClick={()=> getQuote(item) } >
                                 {item}
                             </button>
                         </Typography>
                 </div>
                        )
                    }))}          
-
+    <Jokes jokes={state.jokes} />
             </div>
         </div>
     )
