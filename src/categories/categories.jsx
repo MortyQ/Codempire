@@ -41,7 +41,9 @@ const Categories =()=>{
                        return(
                 <div className="option" key={i} >
                         <Typography  align='center'>
-                            {item}
+                            <button className='categories_button' >
+                                {item}
+                            </button>
                         </Typography>
                 </div>
                        )
